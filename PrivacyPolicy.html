@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ShowScout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --bg-dark: #0f0f1a;
+            --bg-card: #1a1a2e;
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border: rgba(255, 255, 255, 0.1);
+            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Animated Background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+            z-index: -1;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        /* Section Card */
+        .section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section ul {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        .section li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        .section li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight-box.warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: var(--gradient);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: white;
+        }
+
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            padding: 12px 28px;
+            background: white;
+            color: var(--primary-dark);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-email:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header {
+                padding: 40px 16px 30px;
+            }
+            .section {
+                padding: 24px 20px;
+                border-radius: 16px;
+            }
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">🎬</div>
+            <span class="logo-text">ShowScout</span>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Your privacy matters to us. Here's how we handle your data with care and transparency.</p>
+        <span class="last-updated">Last Updated: December 12, 2025</span>
+    </header>
+
+    <main class="container">
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">👋</div>
+                <h2>Introduction</h2>
+            </div>
+            <p>Welcome to ShowScout! We are committed to protecting your privacy and ensuring transparency about how we handle information. This Privacy Policy explains our practices regarding data collection and usage.</p>
+            <div class="highlight-box">
+                <p><strong>Key Point:</strong> ShowScout is designed with privacy in mind. We do not require user accounts, and we minimize data collection to only what's necessary for the app to function.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h2>Information We Collect</h2>
+            </div>
+            <p>ShowScout collects minimal information to provide you with the best experience:</p>
+            <ul>
+                <li><strong>Device Information:</strong> Basic device type and OS version for app optimization</li>
+                <li><strong>App Usage Data:</strong> Anonymous analytics to improve app performance</li>
+                <li><strong>AI Prompts:</strong> When using AI recommendations, your mood/preference prompts are processed but not stored</li>
+                <li><strong>Local Preferences:</strong> Theme settings and favorites stored locally on your device</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>We DO NOT collect:</strong> Personal identification, email addresses, location data, contacts, or any sensitive personal information.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">🤖</div>
+                <h2>AI-Powered Features</h2>
+            </div>
+            <p>ShowScout uses AI technology to provide personalized movie recommendations:</p>
+            <ul>
+                <li><strong>Groq AI Integration:</strong> Your mood and preference prompts are sent to Groq's AI service to generate recommendations</li>
+                <li><strong>No Storage:</strong> AI prompts are processed in real-time and are not stored or linked to your identity</li>
+                <li><strong>Anonymous Processing:</strong> All AI requests are anonymous with no personal identifiers attached</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">🔗</div>
+                <h2>Third-Party Services</h2>
+            </div>
+            <p>ShowScout integrates with the following trusted third-party services:</p>
+            <ul>
+                <li><strong>TMDB (The Movie Database):</strong> Provides movie and TV show information, images, and metadata</li>
+                <li><strong>Groq AI:</strong> Powers our AI recommendation feature for personalized suggestions</li>
+            </ul>
+            <p>These services have their own privacy policies. We encourage you to review them:</p>
+            <ul>
+                <li>TMDB Privacy Policy: <a href="https://www.themoviedb.org/privacy-policy" style="color: var(--primary);">themoviedb.org/privacy-policy</a></li>
+                <li>Groq Privacy Policy: <a href="https://groq.com/privacy-policy/" style="color: var(--primary);">groq.com/privacy-policy</a></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">💾</div>
+                <h2>Data Storage & Security</h2>
+            </div>
+            <ul>
+                <li><strong>Local Storage:</strong> Your favorites, watchlist, and preferences are stored only on your device</li>
+                <li><strong>No Cloud Sync:</strong> We do not upload your personal data to any cloud servers</li>
+                <li><strong>Secure Connections:</strong> All network communications use encrypted HTTPS connections</li>
+                <li><strong>No User Accounts:</strong> We don't require registration, so there's no account data to protect</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">👶</div>
+                <h2>Children's Privacy</h2>
+            </div>
+            <p>ShowScout does not knowingly collect personal information from children under 13. Our app is designed for general audiences and does not target children. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <h2>Changes to This Policy</h2>
+            </div>
+            <p>We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">⚖️</div>
+                <h2>Your Rights</h2>
+            </div>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access information about what data we process</li>
+                <li>Request deletion of any locally stored data by clearing app cache or uninstalling</li>
+                <li>Opt out of AI features by simply not using them</li>
+                <li>Contact us with any privacy-related questions or concerns</li>
+            </ul>
+        </section>
+
+        <div class="contact-card">
+            <h3>Questions or Concerns?</h3>
+            <p>We're here to help. Reach out to us anytime.</p>
+            <a href="mailto:coder.publisher.22@gmail.com" class="contact-email">
+                coder.publisher.22@gmail.com
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 ShowScout. All rights reserved.</p>
+        <p style="margin-top: 8px;">
+            This product uses the TMDB API but is not endorsed or certified by TMDB.
+        </p>
+        <p style="margin-top: 16px;">
+            <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+</body>
+</html>
