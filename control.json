@@ -1,16 +1,16 @@
 {
   "features": {
-    "full_app_enabled": true,
+    "full_app_enabled": false,
     "movies_enabled": false,
     "tv_shows_enabled": false,
     "search_enabled": false,
     "genres_enabled": false,
     "watchlist_enabled": false,
     "favorites_enabled": false,
-    "onboarding_enabled": false,
     "settings_enabled": true,
     "ai_picks_enabled": true,
-    "quiz_enabled": true
+    "quiz_enabled": true,
+    "onboarding_enabled": false
   },
   "version": "1.0.0",
   "last_updated": "2025-12-17"
