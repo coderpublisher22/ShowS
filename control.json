@@ -1,6 +1,6 @@
 {
   "features": {
-    "full_app_enabled": true,
+    "full_app_enabled": false,
     "movies_enabled": false,
     "tv_shows_enabled": false,
     "search_enabled": false,
