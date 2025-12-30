@@ -7,11 +7,11 @@
     "tv_shows_enabled": true,
     "search_enabled": true,
     "genres_enabled": true,
-    "watchlist_enabled": true,
-    "settings_enabled": true,
-    "ai_picks_enabled": true,
+    "watchlist_enabled": false,
+    "settings_enabled": false,
+    "ai_picks_enabled": false,
     "quiz_enabled": false,
-    "onboarding_enabled": true,
+    "onboarding_enabled": false,
     "tmdb_attribution_enabled": true
   },
   "ads": {
