@@ -40,23 +40,23 @@
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "aiResults": {
-        "enabled": true,
+        "enabled": false,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "quizResults": {
-        "enabled": true,
+        "enabled": false,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "detailScreens": {
-        "enabled": true,
+        "enabled": false,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "listScreens": {
-        "enabled": true,
+        "enabled": false,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "supplementary": {
-        "enabled": true,
+        "enabled": false,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       }
     }
