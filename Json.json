@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2024-12-30T00:00:00Z",
+  "features": {
+    "full_app_enabled": true,
+    "movies_enabled": true,
+    "tv_shows_enabled": true,
+    "search_enabled": true,
+    "genres_enabled": true,
+    "watchlist_enabled": true,
+    "settings_enabled": true,
+    "ai_picks_enabled": true,
+    "quiz_enabled": true,
+    "onboarding_enabled": true,
+    "tmdb_attribution_enabled": true
+  },
+  "ads": {
+    "enabled": true,
+    "bannerAdUnitId": true,
+    "appOpenAdUnitId": true,
+    "interstitialAdUnitId": true,
+    "rewardedInterstitialAdUnitId": true,
+    "nativeAdUnitId": true,
+    "nativeAdUnitIdHomeFeed": true,
+    "nativeAdUnitIdAiResults": true,
+    "nativeAdUnitIdQuizResults": true,
+    "nativeAdUnitIdDetailScreens": true,
+    "nativeAdUnitIdListScreens": true,
+    "nativeAdUnitIdSupplementar": true
+  },
+  "timing": {
+    "interstitialMinInterval": 60,
+    "appOpenMinInterval": 900,
+    "appOpenMaxAge": 4,
+    "appOpenMinBackgroundTime": 30,
+    "minBackgroundSecondsForResume": 3
+  }
+}
