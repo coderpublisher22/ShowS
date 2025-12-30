@@ -36,7 +36,7 @@
       "enabled": true,
       "adUnitId": "ca-app-pub-3940256099942544/3986624511",
       "homeFeed": {
-        "enabled": true,
+        "enabled": false,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "aiResults": {
