@@ -16,17 +16,50 @@
   },
   "ads": {
     "enabled": true,
-    "bannerAdUnitId": true,
-    "appOpenAdUnitId": true,
-    "interstitialAdUnitId": true,
-    "rewardedInterstitialAdUnitId": true,
-    "nativeAdUnitId": true,
-    "nativeAdUnitIdHomeFeed": true,
-    "nativeAdUnitIdAiResults": true,
-    "nativeAdUnitIdQuizResults": true,
-    "nativeAdUnitIdDetailScreens": true,
-    "nativeAdUnitIdListScreens": true,
-    "nativeAdUnitIdSupplementar": true
+    "banner": {
+      "enabled": true,
+      "adUnitId": "ca-app-pub-3940256099942544/2435281174"
+    },
+    "appOpen": {
+      "enabled": true,
+      "adUnitId": "ca-app-pub-3940256099942544/9257395921"
+    },
+    "interstitial": {
+      "enabled": true,
+      "adUnitId": "ca-app-pub-3940256099942544/1033173712"
+    },
+    "rewardedInterstitial": {
+      "enabled": true,
+      "adUnitId": "ca-app-pub-3940256099942544/6978759866"
+    },
+    "native": {
+      "enabled": true,
+      "adUnitId": "ca-app-pub-3940256099942544/3986624511",
+      "homeFeed": {
+        "enabled": true,
+        "adUnitId": "ca-app-pub-3940256099942544/3986624511"
+      },
+      "aiResults": {
+        "enabled": true,
+        "adUnitId": "ca-app-pub-3940256099942544/3986624511"
+      },
+      "quizResults": {
+        "enabled": true,
+        "adUnitId": "ca-app-pub-3940256099942544/3986624511"
+      },
+      "detailScreens": {
+        "enabled": true,
+        "adUnitId": "ca-app-pub-3940256099942544/3986624511"
+      },
+      "listScreens": {
+        "enabled": true,
+        "adUnitId": "ca-app-pub-3940256099942544/3986624511"
+      },
+      "supplementary": {
+        "enabled": true,
+        "adUnitId": "ca-app-pub-3940256099942544/3986624511"
+      }
+    }
   },
   "timing": {
     "interstitialMinInterval": 60,
