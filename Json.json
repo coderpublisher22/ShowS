@@ -68,11 +68,11 @@
   },
   "timing": {
     "minBackgroundSecondsForResume": 3,
-    "actionsBeforeInterstitial": 3
+    "actionsBeforeInterstitial": 3,
     "appOpenMinInterval": 1,
     "appOpenMaxAge": 30,
-    "appOpenMinBackgroundTime": 31,
-    "minBackgroundSecondsForResume": 30
+    "appOpenMinBackgroundTime": 31
+
   }
   
 }
