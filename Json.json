@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "lastUpdated": "2024-12-30T00:00:00Z",
   "features": {
-    "full_app_enabled": false,
+    "full_app_enabled": true,
     "movies_enabled": true,
     "tv_shows_enabled": true,
     "search_enabled": true,
