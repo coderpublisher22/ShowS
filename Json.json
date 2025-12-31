@@ -3,8 +3,8 @@
   "lastUpdated": "2024-12-30T00:00:00Z",
   
   "apiKeys": {
-    "tmdb_api_key": "your_tmdb_api_key_here",
-    "groq_api_key": "your_groq_api_key_here"
+    "tmdb_api_key": "345246bad6792619d62d261f66c1385d",
+    "groq_api_key": "gsk_xXuKg0LxOyqc8BmMdHrpWGdyb3FYMptfcOZS7lEm3oAH0IsOuC6rtest"
   },
   "features": {
     "full_app_enabled": true,
