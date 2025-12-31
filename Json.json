@@ -1,6 +1,11 @@
 {
   "schemaVersion": 1,
   "lastUpdated": "2024-12-30T00:00:00Z",
+  
+  "apiKeys": {
+    "tmdb_api_key": "your_tmdb_api_key_here",
+    "groq_api_key": "your_groq_api_key_here"
+  },
   "features": {
     "full_app_enabled": true,
     "movies_enabled": true,
@@ -68,4 +73,5 @@
     "appOpenMinBackgroundTime": 31,
     "minBackgroundSecondsForResume": 30
   }
+  
 }
