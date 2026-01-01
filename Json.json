@@ -67,6 +67,7 @@
     }
   },
   "timing": {
+    "interstitialMinInterval": 1,
     "minBackgroundSecondsForResume": 1,
     "actionsBeforeInterstitial": 1,
     "appOpenMinInterval": 1,
