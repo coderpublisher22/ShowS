@@ -38,7 +38,7 @@
       "adUnitId": "ca-app-pub-3940256099942544/6978759866"
     },
     "native": {
-      "enabled": true,
+      "enabled": false,
       "adUnitId": "ca-app-pub-3940256099942544/3986624511",
       "homeFeed": {
         "enabled": false,
