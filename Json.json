@@ -74,7 +74,7 @@
   "timing": {
     "interstitialMinInterval": 4,
     "minBackgroundSecondsForResume": 1,
-    "actionsBeforeInterstitial": 4,
+    "actionsBeforeInterstitial": 14,
     "appOpenMinInterval": 1,
     "appOpenMaxAge": 4,
     "appOpenMinBackgroundTime": 31
