@@ -43,30 +43,30 @@
       "adUnitId": "ca-app-pub-3940256099942544/6978759866"
     },
     "native": {
-      "enabled": false,
+      "enabled": true,
       "adUnitId": "ca-app-pub-3940256099942544/3986624511",
       "homeFeed": {
-        "enabled": false,
+        "enabled": true,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "aiResults": {
-        "enabled": false,
+        "enabled": true,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "quizResults": {
-        "enabled": false,
+        "enabled": true,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "detailScreens": {
-        "enabled": false,
+        "enabled": true,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "listScreens": {
-        "enabled": false,
+        "enabled": true,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       },
       "supplementary": {
-        "enabled": false,
+        "enabled": true,
         "adUnitId": "ca-app-pub-3940256099942544/3986624511"
       }
     }
