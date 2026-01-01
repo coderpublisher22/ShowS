@@ -2,9 +2,14 @@
   "schemaVersion": 1,
   "lastUpdated": "2024-12-30T00:00:00Z",
   
-  "apiKeys": {
+    "apiKeys": {
     "tmdb_api_key": "345246bad6792619d62d261f66c1385d",
-    "groq_api_key": "gsk_xXuKg0LxOyqc8BmMdHrpWGdyb3FYMptfcOZS7lEm3oAH0IsOuC6rtest"
+    "groq_api_keys": [
+      "gsk_xXuKg0LxOyqc8BmMdHrpWGdyb3FYMptfcOZS7lEm3oAH0IsOuC6rtest",
+      "gsk_second_key_xxxxxxxxxxxxx",
+      "gsk_third_key_xxxxxxxxxxxxx",
+      "gsk_fourth_key_xxxxxxxxxxxxx"
+    ]
   },
   "features": {
     "full_app_enabled": true,
