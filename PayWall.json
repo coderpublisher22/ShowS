@@ -1,0 +1,73 @@
+{
+  "version": "1.0",
+  "media": {
+    "type": "image",
+    "url": "",
+    "fallbackUrl": "assets/images/subscription/paywall_hero.png"
+  },
+  "texts": {
+    "badge": "SHOWSCOUT PRO",
+    "title": "Unlock the Full\nExperience",
+    "subtitle": "Get unlimited access to all premium features",
+    "ctaButton": {
+      "weekly": "Start Free Trial",
+      "monthly": "Subscribe Now",
+      "yearly": "Subscribe Now",
+      "lifetime": "Get Lifetime Access",
+      "default": "Subscribe Now"
+    },
+    "restoreButton": "Restore",
+    "cancelAnytime": "Cancel anytime. Subscription auto-renews unless cancelled.",
+    "loadingPlans": "Loading plans...",
+    "processingPurchase": "Processing...",
+    "successTitle": "Welcome to Pro! 🎉",
+    "successMessage": "Thank you for subscribing! You now have access to all premium features.",
+    "successButton": "Let's Go!",
+    "activeTitle": "You're a Pro! 🎉",
+    "errorTitle": "Unable to load plans",
+    "errorMessage": "Please check your connection and try again",
+    "retryButton": "Try Again"
+  },
+  "pricing": {
+    "weekly": {
+      "title": "Weekly",
+      "price": "$4.99",
+      "period": "/week",
+      "badge": "7-DAY FREE",
+      "description": "Try free for 7 days"
+    },
+    "monthly": {
+      "title": "Monthly",
+      "price": "$9.99",
+      "period": "/month",
+      "badge": null,
+      "description": "Billed monthly"
+    },
+    "yearly": {
+      "title": "Yearly",
+      "price": "$49.99",
+      "period": "/year",
+      "badge": "SAVE 60%",
+      "description": "Billed annually"
+    },
+    "lifetime": {
+      "title": "Lifetime",
+      "price": "$99.99",
+      "period": "once",
+      "badge": "BEST VALUE",
+      "description": "Pay once, own forever"
+    }
+  },
+  "features": [
+    {"icon": "block", "label": "No Ads"},
+    {"icon": "auto_awesome", "label": "AI Picks"},
+    {"icon": "quiz", "label": "Quizzes"},
+    {"icon": "bookmark", "label": "Watchlist"},
+    {"icon": "hd", "label": "HD Trailers"},
+    {"icon": "support_agent", "label": "Support"}
+  ],
+  "links": {
+    "termsUrl": "https://showscout.app/terms",
+    "privacyUrl": "https://showscout.app/privacy"
+  }
+}
