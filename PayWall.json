@@ -29,7 +29,7 @@
     "retryButton": "Try Again"
   },
   "features": [
-    {"icon": "block", "label": "No Ads"},
+    {"icon": "block", "label": " Test No Ads"},
     {"icon": "auto_awesome", "label": "AI Picks"},
     {"icon": "quiz", "label": "Quizzes"},
     {"icon": "bookmark", "label": "Watchlist"},
