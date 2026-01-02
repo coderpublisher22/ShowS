@@ -18,7 +18,6 @@
     },
     "restoreButton": "Restore Purchases",
     "cancelAnytime": "Cancel anytime in Settings. Subscription auto-renews until cancelled.",
-    "subscriptionTerms": "Payment will be charged to your App Store or Google Play account at confirmation of purchase. Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscriptions by going to your account settings on the App Store or Google Play after purchase.",
     "loadingPlans": "Loading plans...",
     "processingPurchase": "Processing...",
     "successTitle": "Welcome to Pro! 🎉",
