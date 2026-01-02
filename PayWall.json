@@ -1,16 +1,17 @@
 {
   "version": "1.1",
+  "customizedPaywall": true,
   "media": {
     "type": "image",
     "url": "",
     "fallbackUrl": "assets/images/subscription/paywall_hero.png"
   },
   "texts": {
-    "badge": "Test SHOWSCOUT PRO",
-    "title": "Test Unlock the Full\nExperience",
-    "subtitle": " Test Get unlimited access to all premium features",
+    "badge": "SHOWSCOUT PRO",
+    "title": "Unlock the Full\nExperience",
+    "subtitle": "Get unlimited access to all premium features",
     "ctaButton": {
-      "weekly": "Test Weekly",
+      "weekly": "Subscribe Weekly",
       "monthly": "Subscribe Now",
       "yearly": "Subscribe Now",
       "lifetime": "Get Lifetime Access",
@@ -29,7 +30,7 @@
     "retryButton": "Try Again"
   },
   "features": [
-    {"icon": "block", "label": " Test No Ads"},
+    {"icon": "block", "label": "No Ads"},
     {"icon": "auto_awesome", "label": "AI Picks"},
     {"icon": "quiz", "label": "Quizzes"},
     {"icon": "bookmark", "label": "Watchlist"},
@@ -37,8 +38,8 @@
     {"icon": "support_agent", "label": "Support"}
   ],
   "links": {
-    "termsUrl": "https://testshowscout.app/terms",
-    "privacyUrl": "https://testshowscout.app/privacy",
+    "termsUrl": "https://showscout.app/terms",
+    "privacyUrl": "https://showscout.app/privacy",
     "eulaUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
   }
 }
