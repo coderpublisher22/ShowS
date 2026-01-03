@@ -12,8 +12,8 @@
     "subtitle": "Get unlimited access to all premium features",
     "ctaButton": {
       "weekly": "Weekly",
-      "monthly": "Subscribe Now",
-      "yearly": "Subscribe Now",
+      "monthly": "Subscribe",
+      "yearly": "Subscribe",
       "lifetime": "Get Lifetime Access",
       "default": "Subscribe Now"
     },
