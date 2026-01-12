@@ -10,6 +10,9 @@
             --primary: #6366f1;
             --primary-dark: #4f46e5;
             --secondary: #8b5cf6;
+            --gold: #FFD700;
+            --gold-dark: #FF8C00;
+            --green: #4CAF50;
             --bg-dark: #0f0f1a;
             --bg-card: #1a1a2e;
             --bg-glass: rgba(255, 255, 255, 0.05);
@@ -18,6 +21,7 @@
             --text-muted: #71717a;
             --border: rgba(255, 255, 255, 0.1);
             --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
         }
 
         * {
@@ -34,7 +38,6 @@
             min-height: 100vh;
         }
 
-        /* Animated Background */
         .bg-gradient {
             position: fixed;
             top: 0;
@@ -54,7 +57,6 @@
             50% { opacity: 0.7; }
         }
 
-        /* Header */
         .header {
             text-align: center;
             padding: 60px 20px 40px;
@@ -118,14 +120,12 @@
             color: var(--text-muted);
         }
 
-        /* Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px 60px;
         }
 
-        /* Section Card */
         .section {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -139,6 +139,16 @@
         .section:hover {
             transform: translateY(-2px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .section.premium {
+            border-color: rgba(255, 215, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, var(--bg-card) 100%);
+        }
+
+        .section.security {
+            border-color: rgba(76, 175, 80, 0.3);
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, var(--bg-card) 100%);
         }
 
         .section-header {
@@ -160,6 +170,14 @@
             flex-shrink: 0;
         }
 
+        .section-icon.gold {
+            background: var(--gradient-gold);
+        }
+
+        .section-icon.green {
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+        }
+
         .section h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 22px;
@@ -176,9 +194,10 @@
             margin-bottom: 0;
         }
 
-        .section ul {
-            list-style: none;
+        .section ul, .section ol {
             margin: 16px 0;
+            padding-left: 0;
+            list-style: none;
         }
 
         .section li {
@@ -188,15 +207,22 @@
             color: var(--text-secondary);
         }
 
-        .section li::before {
-            content: "✓";
+        .section ul li::before {
+            content: "•";
             position: absolute;
-            left: 0;
+            left: 8px;
             color: var(--primary);
             font-weight: 600;
         }
 
-        /* Highlight Box */
+        .section.premium ul li::before {
+            color: var(--gold);
+        }
+
+        .section.security ul li::before {
+            color: var(--green);
+        }
+
         .highlight-box {
             background: rgba(99, 102, 241, 0.1);
             border: 1px solid rgba(99, 102, 241, 0.3);
@@ -205,9 +231,14 @@
             margin: 20px 0;
         }
 
-        .highlight-box.warning {
-            background: rgba(245, 158, 11, 0.1);
-            border-color: rgba(245, 158, 11, 0.3);
+        .highlight-box.success {
+            background: rgba(76, 175, 80, 0.1);
+            border-color: rgba(76, 175, 80, 0.3);
+        }
+
+        .highlight-box.gold {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
         }
 
         .highlight-box p {
@@ -215,7 +246,61 @@
             color: var(--text-primary);
         }
 
-        /* Contact Card */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .data-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table td {
+            color: var(--text-secondary);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .security-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            border-radius: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .security-badge::before {
+            content: "✓";
+            color: var(--green);
+            font-weight: 700;
+        }
+
         .contact-card {
             background: var(--gradient);
             border-radius: 16px;
@@ -252,7 +337,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 40px 20px;
@@ -270,7 +354,6 @@
             text-decoration: underline;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
             .header {
                 padding: 40px 16px 30px;
@@ -282,6 +365,9 @@
             .section-header {
                 flex-direction: column;
                 text-align: center;
+            }
+            .security-badges {
+                flex-direction: column;
             }
         }
     </style>
@@ -296,20 +382,18 @@
         </div>
         <h1>Privacy Policy</h1>
         <p class="subtitle">Your privacy matters to us. Here's how we handle your data with care and transparency.</p>
-        <span class="last-updated">Last Updated: December 12, 2025</span>
+        <span class="last-updated">Last Updated: January 12, 2026</span>
     </header>
 
     <main class="container">
-        
+
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">👋</div>
                 <h2>Introduction</h2>
             </div>
-            <p>Welcome to ShowScout! We are committed to protecting your privacy and ensuring transparency about how we handle information. This Privacy Policy explains our practices regarding data collection and usage.</p>
-            <div class="highlight-box">
-                <p><strong>Key Point:</strong> ShowScout is designed with privacy in mind. We do not require user accounts, and we minimize data collection to only what's necessary for the app to function.</p>
-            </div>
+            <p>Welcome to ShowScout! We believe in transparency and want you to understand exactly how we handle your information. This Privacy Policy explains what data we collect, how we use it, and your rights regarding your personal information.</p>
+            <p>By using ShowScout, you agree to the collection and use of information in accordance with this policy.</p>
         </section>
 
         <section class="section">
@@ -318,15 +402,80 @@
                 <h2>Information We Collect</h2>
             </div>
             <p>ShowScout collects minimal information to provide you with the best experience:</p>
-            <ul>
-                <li><strong>Device Information:</strong> Basic device type and OS version for app optimization</li>
-                <li><strong>App Usage Data:</strong> Anonymous analytics to improve app performance</li>
-                <li><strong>AI Prompts:</strong> When using AI recommendations, your mood/preference prompts are processed but not stored</li>
-                <li><strong>Local Preferences:</strong> Theme settings and favorites stored locally on your device</li>
-            </ul>
-            <div class="highlight-box">
-                <p><strong>We DO NOT collect:</strong> Personal identification, email addresses, location data, contacts, or any sensitive personal information.</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Purpose</th>
+                        <th>Storage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Device Info</td>
+                        <td>App optimization & crash reporting</td>
+                        <td>Anonymous</td>
+                    </tr>
+                    <tr>
+                        <td>App Usage</td>
+                        <td>Improve features & performance</td>
+                        <td>Anonymous analytics</td>
+                    </tr>
+                    <tr>
+                        <td>Preferences</td>
+                        <td>Theme, favorites, watchlist</td>
+                        <td>Local device only</td>
+                    </tr>
+                    <tr>
+                        <td>AI Prompts</td>
+                        <td>Generate recommendations</td>
+                        <td>Not stored</td>
+                    </tr>
+                    <tr>
+                        <td>Subscription Status</td>
+                        <td>Verify Pro access</td>
+                        <td>RevenueCat (anonymous)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box success">
+                <p><strong>We DO NOT collect:</strong> Your name, email address, phone number, location, contacts, photos, or any other personally identifiable information.</p>
             </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════════════
+             💎 SHOWSCOUT PRO - SUBSCRIPTION DATA SECTION
+             ═══════════════════════════════════════════════════════════════ -->
+        <section class="section premium">
+            <div class="section-header">
+                <div class="section-icon gold">💎</div>
+                <h2>ShowScout Pro & Subscription Data</h2>
+            </div>
+            <p>When you subscribe to ShowScout Pro, the following data practices apply:</p>
+            
+            <ul>
+                <li><strong>Payment Processing:</strong> All payments are processed securely by Apple App Store or Google Play Store. We never see, store, or have access to your credit card or payment details.</li>
+                <li><strong>Subscription Management:</strong> We use RevenueCat, a trusted third-party service, to manage subscription status and entitlements.</li>
+                <li><strong>Anonymous Identifiers:</strong> RevenueCat uses anonymous app user IDs to track your subscription status without collecting personal information.</li>
+                <li><strong>Receipt Validation:</strong> Purchase receipts are validated with Apple/Google servers to verify your Pro status.</li>
+                <li><strong>Cross-Device Sync:</strong> Your subscription status syncs across devices signed into the same Apple ID or Google account.</li>
+            </ul>
+
+            <div class="highlight-box gold">
+                <p><strong>Your subscription data is only used to:</strong> Verify your Pro status, restore purchases across devices, and provide customer support if you contact us about subscription issues.</p>
+            </div>
+
+            <p><strong>What RevenueCat Collects:</strong></p>
+            <ul>
+                <li>Anonymous app user ID (randomly generated)</li>
+                <li>Subscription status and transaction history</li>
+                <li>Device type and OS version (for compatibility)</li>
+                <li>Country (for currency and tax purposes)</li>
+            </ul>
+
+            <p>RevenueCat does NOT have access to your name, email, or payment card details. Learn more at <a href="https://www.revenuecat.com/privacy" style="color: var(--gold);">revenuecat.com/privacy</a></p>
         </section>
 
         <section class="section">
@@ -334,12 +483,14 @@
                 <div class="section-icon">🤖</div>
                 <h2>AI-Powered Features</h2>
             </div>
-            <p>ShowScout uses AI technology to provide personalized movie recommendations:</p>
+            <p>ShowScout uses AI to provide personalized movie recommendations. Here's how it works:</p>
             <ul>
-                <li><strong>Groq AI Integration:</strong> Your mood and preference prompts are sent to Groq's AI service to generate recommendations</li>
-                <li><strong>No Storage:</strong> AI prompts are processed in real-time and are not stored or linked to your identity</li>
-                <li><strong>Anonymous Processing:</strong> All AI requests are anonymous with no personal identifiers attached</li>
+                <li>When you use the AI recommendation feature, your mood or preference prompt is sent to Groq's AI service</li>
+                <li>Prompts are processed in real-time and are NOT stored by ShowScout</li>
+                <li>No personal information is included in AI requests</li>
+                <li>Groq may process data according to their privacy policy</li>
             </ul>
+            <p>Learn more about Groq's privacy practices at <a href="https://groq.com/privacy-policy/" style="color: var(--primary);">groq.com/privacy-policy</a></p>
         </section>
 
         <section class="section">
@@ -349,26 +500,55 @@
             </div>
             <p>ShowScout integrates with the following trusted third-party services:</p>
             <ul>
-                <li><strong>TMDB (The Movie Database):</strong> Provides movie and TV show information, images, and metadata</li>
-                <li><strong>Groq AI:</strong> Powers our AI recommendation feature for personalized suggestions</li>
+                <li><strong>TMDB (The Movie Database):</strong> Provides movie and TV show information, images, and metadata. No personal data is shared with TMDB.</li>
+                <li><strong>Groq AI:</strong> Powers our AI recommendation feature. Only anonymous prompts are processed.</li>
+                <li><strong>RevenueCat:</strong> Manages subscription status and in-app purchases securely.</li>
+                <li><strong>Apple App Store / Google Play:</strong> Processes all subscription payments securely.</li>
             </ul>
-            <p>These services have their own privacy policies. We encourage you to review them:</p>
+            
+            <p><strong>Third-Party Privacy Policies:</strong></p>
             <ul>
-                <li>TMDB Privacy Policy: <a href="https://www.themoviedb.org/privacy-policy" style="color: var(--primary);">themoviedb.org/privacy-policy</a></li>
-                <li>Groq Privacy Policy: <a href="https://groq.com/privacy-policy/" style="color: var(--primary);">groq.com/privacy-policy</a></li>
+                <li><a href="https://www.themoviedb.org/privacy-policy" style="color: var(--primary);">TMDB Privacy Policy</a></li>
+                <li><a href="https://groq.com/privacy-policy/" style="color: var(--primary);">Groq Privacy Policy</a></li>
+                <li><a href="https://www.revenuecat.com/privacy" style="color: var(--primary);">RevenueCat Privacy Policy</a></li>
+            </ul>
+        </section>
+
+        <section class="section security">
+            <div class="section-header">
+                <div class="section-icon green">🔒</div>
+                <h2>Data Security</h2>
+            </div>
+            <p>We take your security seriously and implement industry-standard protections:</p>
+
+            <div class="security-badges">
+                <div class="security-badge">HTTPS Encryption</div>
+                <div class="security-badge">No Password Storage</div>
+                <div class="security-badge">Secure API Communication</div>
+                <div class="security-badge">Minimal Data Collection</div>
+                <div class="security-badge">Local-First Storage</div>
+            </div>
+
+            <ul>
+                <li>All network communications use HTTPS/TLS encryption</li>
+                <li>We don't store passwords - there's no account system</li>
+                <li>Preferences and watchlists are stored locally on your device</li>
+                <li>Payment processing is handled entirely by Apple/Google</li>
+                <li>We follow the principle of minimal data collection</li>
             </ul>
         </section>
 
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">💾</div>
-                <h2>Data Storage & Security</h2>
+                <h2>Data Storage & Retention</h2>
             </div>
+            <p>Here's how long we keep different types of data:</p>
             <ul>
-                <li><strong>Local Storage:</strong> Your favorites, watchlist, and preferences are stored only on your device</li>
-                <li><strong>No Cloud Sync:</strong> We do not upload your personal data to any cloud servers</li>
-                <li><strong>Secure Connections:</strong> All network communications use encrypted HTTPS connections</li>
-                <li><strong>No User Accounts:</strong> We don't require registration, so there's no account data to protect</li>
+                <li><strong>Local Preferences:</strong> Stored on your device until you clear app data or uninstall</li>
+                <li><strong>Analytics Data:</strong> Aggregated anonymously, retained for up to 26 months</li>
+                <li><strong>AI Prompts:</strong> Not stored - processed and discarded immediately</li>
+                <li><strong>Subscription Data:</strong> Retained by RevenueCat as long as your subscription is active, or as required for transaction records</li>
             </ul>
         </section>
 
@@ -377,15 +557,8 @@
                 <div class="section-icon">👶</div>
                 <h2>Children's Privacy</h2>
             </div>
-            <p>ShowScout does not knowingly collect personal information from children under 13. Our app is designed for general audiences and does not target children. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <div class="section-icon">🔄</div>
-                <h2>Changes to This Policy</h2>
-            </div>
-            <p>We may update this Privacy Policy from time to time. When we make changes, we will update the "Last Updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+            <p>ShowScout is not directed at children under 13. We do not knowingly collect personal information from children under 13 years of age.</p>
+            <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will take steps to remove such information.</p>
         </section>
 
         <section class="section">
@@ -393,13 +566,33 @@
                 <div class="section-icon">⚖️</div>
                 <h2>Your Rights</h2>
             </div>
-            <p>You have the right to:</p>
+            <p>You have control over your data. Here are your rights:</p>
             <ul>
-                <li>Access information about what data we process</li>
-                <li>Request deletion of any locally stored data by clearing app cache or uninstalling</li>
-                <li>Opt out of AI features by simply not using them</li>
-                <li>Contact us with any privacy-related questions or concerns</li>
+                <li><strong>Access:</strong> Request information about what data we process</li>
+                <li><strong>Deletion:</strong> Clear local data by clearing app cache or uninstalling the app</li>
+                <li><strong>Opt-Out:</strong> Don't use AI features if you prefer not to have prompts processed</li>
+                <li><strong>Subscription Management:</strong> Manage or cancel subscriptions through Apple/Google account settings</li>
+                <li><strong>Data Portability:</strong> Your watchlist and preferences are stored locally and can be accessed on your device</li>
+                <li><strong>Contact Us:</strong> Reach out with any privacy-related questions or data requests</li>
             </ul>
+
+            <div class="highlight-box">
+                <p><strong>To request subscription data deletion:</strong> Contact us at the email below with your request. Note that some transaction data may be retained by Apple/Google and RevenueCat for legal and accounting purposes.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">🔄</div>
+                <h2>Changes to This Policy</h2>
+            </div>
+            <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+            <ul>
+                <li>We will update the "Last Updated" date at the top of this page</li>
+                <li>For significant changes, we may notify you via in-app notification</li>
+                <li>Continued use of the app after changes constitutes acceptance</li>
+            </ul>
+            <p>We encourage you to review this Privacy Policy periodically for any updates.</p>
         </section>
 
         <div class="contact-card">
@@ -413,7 +606,7 @@
     </main>
 
     <footer class="footer">
-        <p>© 2025 ShowScout. All rights reserved.</p>
+        <p>© 2026 ShowScout. All rights reserved.</p>
         <p style="margin-top: 8px;">
             This product uses the TMDB API but is not endorsed or certified by TMDB.
         </p>
