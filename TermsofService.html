@@ -10,6 +10,8 @@
             --primary: #6366f1;
             --primary-dark: #4f46e5;
             --secondary: #8b5cf6;
+            --gold: #FFD700;
+            --gold-dark: #FF8C00;
             --bg-dark: #0f0f1a;
             --bg-card: #1a1a2e;
             --bg-glass: rgba(255, 255, 255, 0.05);
@@ -18,6 +20,7 @@
             --text-muted: #71717a;
             --border: rgba(255, 255, 255, 0.1);
             --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --gradient-gold: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
         }
 
         * {
@@ -137,6 +140,11 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
+        .section.premium {
+            border-color: rgba(255, 215, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, var(--bg-card) 100%);
+        }
+
         .section-header {
             display: flex;
             align-items: center;
@@ -154,6 +162,10 @@
             justify-content: center;
             font-size: 20px;
             flex-shrink: 0;
+        }
+
+        .section-icon.gold {
+            background: var(--gradient-gold);
         }
 
         .section h2 {
@@ -193,6 +205,10 @@
             font-weight: 600;
         }
 
+        .section.premium ul li::before {
+            color: var(--gold);
+        }
+
         .section ol {
             counter-reset: item;
         }
@@ -224,9 +240,55 @@
             border-color: rgba(239, 68, 68, 0.3);
         }
 
+        .highlight-box.gold {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
         .highlight-box p {
             margin: 0;
             color: var(--text-primary);
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pricing-table th {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-table td {
+            color: var(--text-secondary);
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--gradient-gold);
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #000;
+            margin-left: 8px;
         }
 
         .contact-card {
@@ -294,6 +356,13 @@
                 flex-direction: column;
                 text-align: center;
             }
+            .pricing-table {
+                font-size: 14px;
+            }
+            .pricing-table th,
+            .pricing-table td {
+                padding: 10px 12px;
+            }
         }
     </style>
 </head>
@@ -307,7 +376,7 @@
         </div>
         <h1>Terms of Service</h1>
         <p class="subtitle">Please read these terms carefully before using ShowScout.</p>
-        <span class="last-updated">Effective Date: December 12, 2025</span>
+        <span class="last-updated">Effective Date: January 12, 2026</span>
     </header>
 
     <main class="container">
@@ -338,6 +407,130 @@
             </div>
         </section>
 
+        <!-- ═══════════════════════════════════════════════════════════════
+             💎 SHOWSCOUT PRO - PREMIUM SUBSCRIPTION SECTION
+             ═══════════════════════════════════════════════════════════════ -->
+        <section class="section premium">
+            <div class="section-header">
+                <div class="section-icon gold">💎</div>
+                <h2>ShowScout Pro Subscription</h2>
+            </div>
+            <p>ShowScout offers optional premium subscriptions ("ShowScout Pro") that unlock additional features:</p>
+            
+            <h3 style="color: var(--gold); margin: 20px 0 12px; font-size: 16px;">Pro Features Include:</h3>
+            <ul>
+                <li><strong>Ad-Free Experience:</strong> Enjoy ShowScout without any advertisements</li>
+                <li><strong>Unlimited AI Recommendations:</strong> Get personalized movie picks powered by AI</li>
+                <li><strong>Unlimited Quizzes:</strong> Test your movie knowledge without limits</li>
+                <li><strong>Unlimited Watchlists:</strong> Organize all your favorite content</li>
+                <li><strong>Where to Watch:</strong> Find streaming availability for any movie</li>
+                <li><strong>Priority Support:</strong> Get faster response times from our team</li>
+            </ul>
+
+            <h3 style="color: var(--text-primary); margin: 24px 0 12px; font-size: 16px;">Subscription Plans:</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Plan</th>
+                        <th>Billing</th>
+                        <th>Features</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Weekly</td>
+                        <td>Billed every 7 days</td>
+                        <td>All Pro features</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly</td>
+                        <td>Billed every month</td>
+                        <td>All Pro features</td>
+                    </tr>
+                    <tr>
+                        <td>Lifetime <span class="badge">BEST VALUE</span></td>
+                        <td>One-time purchase</td>
+                        <td>All Pro features forever</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box gold">
+                <p><strong>Lifetime Plan:</strong> Pay once and enjoy all Pro features permanently. No recurring charges, ever!</p>
+            </div>
+        </section>
+
+        <section class="section premium">
+            <div class="section-header">
+                <div class="section-icon gold">💳</div>
+                <h2>Billing & Payment</h2>
+            </div>
+            <p>All payments for ShowScout Pro are processed securely:</p>
+            <ul>
+                <li><strong>Payment Processing:</strong> All transactions are handled by Apple App Store or Google Play Store</li>
+                <li><strong>Payment Method:</strong> Charged to your Apple ID or Google account payment method</li>
+                <li><strong>Currency:</strong> Prices are displayed in your local currency</li>
+                <li><strong>Receipts:</strong> Transaction receipts are sent automatically by Apple/Google</li>
+                <li><strong>Taxes:</strong> Applicable taxes may be added based on your location</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Security:</strong> We never see, store, or have access to your payment card details. All payment information is handled securely by Apple and Google.</p>
+            </div>
+        </section>
+
+        <section class="section premium">
+            <div class="section-header">
+                <div class="section-icon gold">🔄</div>
+                <h2>Auto-Renewal & Cancellation</h2>
+            </div>
+            <p><strong>Auto-Renewal (Weekly & Monthly Plans):</strong></p>
+            <ul>
+                <li>Subscriptions automatically renew unless cancelled at least 24 hours before the current period ends</li>
+                <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+                <li>The renewal price will be the same as the original subscription price</li>
+            </ul>
+
+            <p><strong>How to Cancel:</strong></p>
+            <ul>
+                <li><strong>iOS:</strong> Settings → [Your Name] → Subscriptions → ShowScout → Cancel Subscription</li>
+                <li><strong>Android:</strong> Google Play Store → Profile → Payments & subscriptions → Subscriptions → ShowScout → Cancel</li>
+            </ul>
+
+            <div class="highlight-box warning">
+                <p><strong>Important:</strong> Cancellation takes effect at the end of your current billing period. You'll retain Pro access until then. Deleting the app does NOT cancel your subscription.</p>
+            </div>
+
+            <p><strong>Lifetime Plan:</strong> The Lifetime plan is a one-time purchase and does not auto-renew. No cancellation is needed.</p>
+        </section>
+
+        <section class="section premium">
+            <div class="section-header">
+                <div class="section-icon gold">💰</div>
+                <h2>Refunds</h2>
+            </div>
+            <p>Refund policies are governed by Apple and Google:</p>
+            <ul>
+                <li><strong>iOS Refunds:</strong> Request through Apple at <a href="https://reportaproblem.apple.com" style="color: var(--gold);">reportaproblem.apple.com</a></li>
+                <li><strong>Android Refunds:</strong> Request through Google Play Store within 48 hours of purchase, or contact Google Play support</li>
+                <li><strong>Lifetime Purchases:</strong> Subject to respective app store refund policies</li>
+            </ul>
+            <p>We cannot process refunds directly as all payments are handled by Apple/Google. If you're experiencing issues with your subscription, please contact us and we'll do our best to help.</p>
+        </section>
+
+        <section class="section premium">
+            <div class="section-header">
+                <div class="section-icon gold">📈</div>
+                <h2>Price Changes</h2>
+            </div>
+            <p>We may adjust subscription prices from time to time:</p>
+            <ul>
+                <li>Price changes will be communicated in advance via the app or email</li>
+                <li>Existing subscribers will be notified before any price change affects their renewal</li>
+                <li>You may cancel before the new price takes effect</li>
+                <li><strong>Lifetime purchases are never affected by price changes</strong> - you keep your access forever at the price you paid</li>
+            </ul>
+        </section>
+
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">🎯</div>
@@ -350,6 +543,8 @@
                 <li>Not use the App for any illegal or unauthorized purpose</li>
                 <li>Not attempt to access data or systems you are not authorized to access</li>
                 <li>Not use automated systems or bots to access the App</li>
+                <li>Not share, resell, or transfer your Pro subscription to others</li>
+                <li>Not attempt to bypass subscription verification or access Pro features without payment</li>
             </ul>
         </section>
 
@@ -372,14 +567,14 @@
                 <div class="section-icon">🔗</div>
                 <h2>Third-Party Content & Services</h2>
             </div>
-            <p>ShowScout uses data from The Movie Database (TMDB) and AI services from Groq:</p>
+            <p>ShowScout uses data and services from trusted third parties:</p>
             <ul>
-                <li>All movie and TV show data, images, and metadata are provided by TMDB</li>
-                <li>This product uses the TMDB API but is not endorsed or certified by TMDB</li>
-                <li>AI recommendations are powered by Groq's AI technology</li>
-                <li>We are not responsible for the accuracy of third-party data</li>
+                <li><strong>TMDB:</strong> All movie and TV show data, images, and metadata are provided by The Movie Database (TMDB)</li>
+                <li><strong>Groq AI:</strong> Powers our AI recommendation feature</li>
+                <li><strong>RevenueCat:</strong> Manages subscription status and in-app purchases</li>
+                <li><strong>Apple/Google:</strong> Process all subscription payments</li>
             </ul>
-            <p>Links to external websites (streaming services, TMDB, etc.) are provided for convenience. We are not responsible for the content or practices of external sites.</p>
+            <p>This product uses the TMDB API but is not endorsed or certified by TMDB. Links to external websites are provided for convenience. We are not responsible for the content or practices of external sites.</p>
         </section>
 
         <section class="section">
@@ -406,6 +601,7 @@
                 <li>All information will be accurate or up-to-date</li>
                 <li>The App will meet your specific requirements</li>
                 <li>AI recommendations will be suitable for your preferences</li>
+                <li>Pro features will always be available without interruption</li>
             </ul>
         </section>
 
@@ -414,10 +610,13 @@
                 <div class="section-icon">🛡️</div>
                 <h2>Limitation of Liability</h2>
             </div>
-            <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of ShowScout.</p>
-            <div class="highlight-box danger">
-                <p><strong>Note:</strong> We are not liable for any decisions you make based on information or recommendations provided by the App.</p>
-            </div>
+            <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of ShowScout, including but not limited to:</p>
+            <ul>
+                <li>Loss of data or content</li>
+                <li>Subscription payment disputes with Apple/Google</li>
+                <li>Decisions made based on app information or AI recommendations</li>
+                <li>Service interruptions or unavailability</li>
+            </ul>
         </section>
 
         <section class="section">
@@ -426,6 +625,7 @@
                 <h2>Changes to Terms</h2>
             </div>
             <p>We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting. Your continued use of the App after changes constitutes acceptance of the new terms.</p>
+            <p>For significant changes affecting subscriptions, we will provide advance notice via the app or email.</p>
         </section>
 
         <section class="section">
@@ -434,6 +634,7 @@
                 <h2>Termination</h2>
             </div>
             <p>We reserve the right to terminate or suspend access to the App at any time, without notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.</p>
+            <p>Upon termination, your right to use the App and any Pro features will immediately cease. No refunds will be provided for terminated accounts due to Terms violations.</p>
         </section>
 
         <section class="section">
@@ -455,7 +656,7 @@
     </main>
 
     <footer class="footer">
-        <p>© 2025 ShowScout. All rights reserved.</p>
+        <p>© 2026 ShowScout. All rights reserved.</p>
         <p style="margin-top: 8px;">
             This product uses the TMDB API but is not endorsed or certified by TMDB.
         </p>
