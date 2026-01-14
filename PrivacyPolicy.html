@@ -151,6 +151,11 @@
             background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, var(--bg-card) 100%);
         }
 
+        .section.advertising {
+            border-color: rgba(255, 152, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, var(--bg-card) 100%);
+        }
+
         .section-header {
             display: flex;
             align-items: center;
@@ -178,11 +183,23 @@
             background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
         }
 
+        .section-icon.orange {
+            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+        }
+
         .section h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 22px;
             font-weight: 600;
             color: var(--text-primary);
+        }
+
+        .section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 20px 0 12px;
         }
 
         .section p {
@@ -223,6 +240,10 @@
             color: var(--green);
         }
 
+        .section.advertising ul li::before {
+            color: #FF9800;
+        }
+
         .highlight-box {
             background: rgba(99, 102, 241, 0.1);
             border: 1px solid rgba(99, 102, 241, 0.3);
@@ -239,6 +260,11 @@
         .highlight-box.gold {
             background: rgba(255, 215, 0, 0.1);
             border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .highlight-box.orange {
+            background: rgba(255, 152, 0, 0.1);
+            border-color: rgba(255, 152, 0, 0.3);
         }
 
         .highlight-box p {
@@ -382,7 +408,7 @@
         </div>
         <h1>Privacy Policy</h1>
         <p class="subtitle">Your privacy matters to us. Here's how we handle your data with care and transparency.</p>
-        <span class="last-updated">Last Updated: January 12, 2026</span>
+        <span class="last-updated">Last Updated: January 14, 2026</span>
     </header>
 
     <main class="container">
@@ -437,6 +463,11 @@
                         <td>Verify Pro access</td>
                         <td>RevenueCat (anonymous)</td>
                     </tr>
+                    <tr>
+                        <td>Advertising ID</td>
+                        <td>Personalized ads (if permitted)</td>
+                        <td>Google AdMob</td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -478,6 +509,44 @@
             <p>RevenueCat does NOT have access to your name, email, or payment card details. Learn more at <a href="https://www.revenuecat.com/privacy" style="color: var(--gold);">revenuecat.com/privacy</a></p>
         </section>
 
+        <!-- ═══════════════════════════════════════════════════════════════
+             📢 ADVERTISING & TRACKING SECTION
+             ═══════════════════════════════════════════════════════════════ -->
+        <section class="section advertising">
+            <div class="section-header">
+                <div class="section-icon orange">📢</div>
+                <h2>Advertising</h2>
+            </div>
+            <p>ShowScout displays ads provided by Google AdMob to support free access to the app.</p>
+            
+            <h3>What AdMob Collects:</h3>
+            <ul>
+                <li><strong>Device Identifiers:</strong> Advertising ID (IDFA on iOS, GAID on Android)</li>
+                <li><strong>Usage Data:</strong> App interactions, ad views, and clicks</li>
+                <li><strong>Device Information:</strong> Device type, OS version, language</li>
+            </ul>
+
+            <h3>App Tracking Transparency (iOS)</h3>
+            <p>On iOS 14.5+, we request your permission before tracking your activity across other apps and websites. You can:</p>
+            <ul>
+                <li>Allow tracking for personalized ads</li>
+                <li>Deny tracking to see non-personalized ads</li>
+                <li>Change your choice anytime in Settings → Privacy & Security → Tracking</li>
+            </ul>
+
+            <h3>Opting Out of Personalized Ads:</h3>
+            <ul>
+                <li><strong>iOS:</strong> Settings → Privacy & Security → Apple Advertising → Turn off Personalized Ads</li>
+                <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+            </ul>
+
+            <div class="highlight-box gold">
+                <p><strong>🎉 ShowScout Pro subscribers do not see any ads.</strong> Upgrade to Pro for an ad-free experience.</p>
+            </div>
+
+            <p>Learn more: <a href="https://policies.google.com/privacy" style="color: #FF9800;">Google Privacy Policy</a></p>
+        </section>
+
         <section class="section">
             <div class="section-header">
                 <div class="section-icon">🤖</div>
@@ -503,6 +572,7 @@
                 <li><strong>TMDB (The Movie Database):</strong> Provides movie and TV show information, images, and metadata. No personal data is shared with TMDB.</li>
                 <li><strong>Groq AI:</strong> Powers our AI recommendation feature. Only anonymous prompts are processed.</li>
                 <li><strong>RevenueCat:</strong> Manages subscription status and in-app purchases securely.</li>
+                <li><strong>Google AdMob:</strong> Displays advertisements to support free access to the app.</li>
                 <li><strong>Apple App Store / Google Play:</strong> Processes all subscription payments securely.</li>
             </ul>
             
@@ -511,6 +581,7 @@
                 <li><a href="https://www.themoviedb.org/privacy-policy" style="color: var(--primary);">TMDB Privacy Policy</a></li>
                 <li><a href="https://groq.com/privacy-policy/" style="color: var(--primary);">Groq Privacy Policy</a></li>
                 <li><a href="https://www.revenuecat.com/privacy" style="color: var(--primary);">RevenueCat Privacy Policy</a></li>
+                <li><a href="https://policies.google.com/privacy" style="color: var(--primary);">Google Privacy Policy</a></li>
             </ul>
         </section>
 
@@ -549,6 +620,7 @@
                 <li><strong>Analytics Data:</strong> Aggregated anonymously, retained for up to 26 months</li>
                 <li><strong>AI Prompts:</strong> Not stored - processed and discarded immediately</li>
                 <li><strong>Subscription Data:</strong> Retained by RevenueCat as long as your subscription is active, or as required for transaction records</li>
+                <li><strong>Advertising Data:</strong> Managed by Google AdMob according to their retention policies</li>
             </ul>
         </section>
 
@@ -570,7 +642,8 @@
             <ul>
                 <li><strong>Access:</strong> Request information about what data we process</li>
                 <li><strong>Deletion:</strong> Clear local data by clearing app cache or uninstalling the app</li>
-                <li><strong>Opt-Out:</strong> Don't use AI features if you prefer not to have prompts processed</li>
+                <li><strong>Opt-Out of Tracking:</strong> Deny tracking permission when prompted, or change in device settings</li>
+                <li><strong>Opt-Out of Personalized Ads:</strong> Adjust settings on your device (see Advertising section)</li>
                 <li><strong>Subscription Management:</strong> Manage or cancel subscriptions through Apple/Google account settings</li>
                 <li><strong>Data Portability:</strong> Your watchlist and preferences are stored locally and can be accessed on your device</li>
                 <li><strong>Contact Us:</strong> Reach out with any privacy-related questions or data requests</li>
@@ -611,7 +684,7 @@
             This product uses the TMDB API but is not endorsed or certified by TMDB.
         </p>
         <p style="margin-top: 16px;">
-            <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a>
+            <a href="TermsofService.html">Terms of Service</a> · <a href="PrivacyPolicy.html">Privacy Policy</a>
         </p>
     </footer>
 
