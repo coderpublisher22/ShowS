@@ -1,1 +1,10 @@
-google.com, pub-9238291077605142, DIRECT, f08c47fec0942fa0
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=https://ce362eb87.app-ads-txt.com/app-ads.txt" />
+    <link rel="canonical" href="https://ce362eb87.app-ads-txt.com/app-ads.txt" />
+  </head>
+  <body>
+    <p>Redirecting... <a href="https://ce362eb87.app-ads-txt.com/app-ads.txt">Click here</a></p>
+  </body>
+</html>
